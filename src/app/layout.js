@@ -1,5 +1,6 @@
 import { Inter } from "next/font/google";
 import "./globals.css";
+import { PosthogLoader } from "@/components";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -11,7 +12,9 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body className={`dark ${inter.className}`}>{children}</body>
+      <PosthogLoader>
+        <body className={`dark ${inter.className}`}>{children}</body>
+      </PosthogLoader>
     </html>
   );
 }
