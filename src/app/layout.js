@@ -1,6 +1,6 @@
 import { Inter } from "next/font/google";
 import "./globals.css";
-import { PosthogLoader } from "@/components";
+import { ChatwootLoader, CrispChatLoader, PosthogLoader, TawkToLoader } from "@/components";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -15,6 +15,9 @@ export default function RootLayout({ children }) {
       <PosthogLoader>
         <body className={`dark ${inter.className}`}>{children}</body>
       </PosthogLoader>
+      {/* <CrispChatLoader /> */}
+      {/* <TawkToLoader /> */}
+      <ChatwootLoader />
     </html>
   );
 }
