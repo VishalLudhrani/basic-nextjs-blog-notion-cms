@@ -2,6 +2,7 @@ import Markdown from "react-markdown";
 import remarkMdx from "remark-mdx";
 import { getBlogData, getBlogsList } from "@/lib/cms";
 import { getPostData } from "@/lib/notion";
+import Image from "next/image";
 
 async function getBlogTitle(slug) {
   const blogs = await getBlogsList();
@@ -63,6 +64,11 @@ export default async function BlogPage({ params }) {
                 <summary>
                   {children}
                 </summary>
+              )
+            },
+            img(props) {
+              return (
+                <Image src={props.src} alt={props.alt} width={500} height={500} />
               )
             },
             "todo": (props) => {
