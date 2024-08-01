@@ -24,14 +24,14 @@ export async function generateMetadata({ params }) {
   return {
     title,
     description: "Blog description",
-    metadataBase: new URL(process.env.VERCEL_URL),
+    metadataBase: process.env.VERCEL_URL,
     alternates: {
       canonical: `${process.env.VERCEL_URL}/posts/${params?.slug}`
     },
     openGraph:{
       title,
       description: "Blog description",
-      metadataBase: new URL(process.env.VERCEL_URL)
+      metadataBase: process.env.VERCEL_URL
     }
   }
 }
