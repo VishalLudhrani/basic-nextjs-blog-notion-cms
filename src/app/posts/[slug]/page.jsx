@@ -23,9 +23,15 @@ export async function generateMetadata({ params }) {
   const title = await getBlogTitle(params?.slug) || ""
   return {
     title,
-    metadataBase: process.env.VERCEL_URL,
+    description: "Blog description",
+    metadataBase: new URL(process.env.VERCEL_URL),
     alternates: {
       canonical: `${process.env.VERCEL_URL}/posts/${params?.slug}`
+    },
+    openGraph:{
+      title,
+      description: "Blog description",
+      metadataBase: new URL(process.env.VERCEL_URL)
     }
   }
 }

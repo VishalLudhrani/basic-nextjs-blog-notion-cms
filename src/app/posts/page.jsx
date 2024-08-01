@@ -7,6 +7,11 @@ export const metadata = {
   title: "Blog posts",
   description: "Blog posts",
   metadataBase: process.env.VERCEL_URL,
+  openGraph:{
+    title: "Blog landing page",
+    description: "Blog landing page",
+    metadataBase: new URL(process.env.VERCEL_URL)
+  }
 }
 
 export default async function BlogLanding() {
