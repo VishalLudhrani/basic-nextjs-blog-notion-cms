@@ -10,7 +10,8 @@ export const metadata = {
   openGraph:{
     title: "Blog landing page",
     description: "Blog landing page",
-    metadataBase: new URL(process.env.VERCEL_URL)
+    metadataBase: new URL(process.env.VERCEL_URL),
+    images: [`${process.env.VERCEL_URL}/posts/opengraph-image.png`]
   }
 }
 
