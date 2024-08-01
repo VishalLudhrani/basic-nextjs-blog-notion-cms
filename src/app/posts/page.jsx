@@ -5,7 +5,8 @@ export const revalidate = 8 * 60 * 60; // revalidate every 8 hours
 
 export const metadata = {
   title: "Blog posts",
-  description: "Blog posts"
+  description: "Blog posts",
+  metadataBase: process.env.VERCEL_URL,
 }
 
 export default async function BlogLanding() {

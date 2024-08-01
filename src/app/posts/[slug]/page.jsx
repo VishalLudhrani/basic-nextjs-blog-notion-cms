@@ -22,7 +22,11 @@ export async function generateStaticParams() {
 export async function generateMetadata({ params }) {
   const title = await getBlogTitle(params?.slug) || ""
   return {
-    title
+    title,
+    metadataBase: process.env.VERCEL_URL,
+    alternates: {
+      canonical: `${process.env.VERCEL_URL}/posts/${params?.slug}`
+    }
   }
 }
 
