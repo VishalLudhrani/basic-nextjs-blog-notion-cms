@@ -11,7 +11,6 @@ export const metadata = {
     title: "Blog landing page",
     description: "Blog landing page",
     metadataBase: process.env.VERCEL_URL,
-    images: [`${process.env.VERCEL_URL}/posts/opengraph-image.png`]
   }
 }
 
