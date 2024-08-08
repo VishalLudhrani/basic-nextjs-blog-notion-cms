@@ -3,6 +3,7 @@ import remarkMdx from "remark-mdx";
 import { getBlogData, getBlogsList } from "@/lib/cms";
 import { getPostData } from "@/lib/notion";
 import Image from "next/image";
+import FeedbackForm from "@/components/FeedbackForm";
 
 async function getBlogTitle(slug) {
   const blogs = await getBlogsList();
@@ -90,6 +91,7 @@ export default async function BlogPage({ params }) {
           {blog?.contentMd}
         </Markdown>
       </article>
+      <FeedbackForm />
     </main>
   )
 }
