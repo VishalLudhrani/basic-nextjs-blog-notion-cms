@@ -4,6 +4,6 @@ export default async (req, context) => {
   return new Response("Submission created\n-----req-----" + JSON.stringify(req) + "\n-----context-----\n" + JSON.stringify(context))
 }
 
-export const config = {
-  path: ["/posts", "/posts/:slug"]
-}
+// export const config = {
+//   path: ["/posts", "/posts/:slug"]
+// }
