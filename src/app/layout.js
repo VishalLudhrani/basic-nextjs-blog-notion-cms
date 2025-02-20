@@ -27,13 +27,15 @@ export default function RootLayout({ children }) {
         <Script>
           {
             `
-              window.algoliasearchNetlify({
-                appId: 'WWO4R9FSTI',
-                apiKey: 'f7b98a870a6130f09275674aa4cb049a',
-                siteId: 'f4abf57e-23fa-4f83-ad95-178d6a773bc2',
-                branch: 'main',
-                selector: 'div#search',
-              });
+              setTimeout(() => {
+                window.algoliasearchNetlify({
+                  appId: 'WWO4R9FSTI',
+                  apiKey: 'cc822ee756b82afe4b09f030d9450ac0',
+                  siteId: 'f4abf57e-23fa-4f83-ad95-178d6a773bc2',
+                  branch: 'main',
+                  selector: 'div#search',
+                });
+              }, 100)
             `
           }
         </Script>
