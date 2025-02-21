@@ -19,7 +19,7 @@ export default async function BlogLanding() {
   const posts = await getBlogsList();
   return (
     <main className="container mx-auto px-8 my-10">
-      <h1 className="text-3xl font-bold mb-4">Blog Editorial</h1>
+      <h1 className="text-3xl font-bold mb-4">Blog Editorial - Staging</h1>
       <div id="search" />
       <section className="grid grid-cols-4 gap-2">
         {posts.map(post => (
